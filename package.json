@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:sponsored": "npx hardhat run scripts/testRelaySponsored.ts --network thrive"
+    "test:sponsored": "npx hardhat run scripts/testRelaySponsored.ts --network thrive",
+    "test:sponsored-erc2771": "npx hardhat run scripts/testRelaySponsoredERC2771.ts --network thrive",
+    "debug:contracts": "npx hardhat run scripts/debugContracts.ts --network thrive",
+    "test:call-with-sync-fee": "npx hardhat run scripts/testRelayCallWithSyncFee.ts --network thrive"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   },
   "dependencies": {
     "@gelatonetwork/relay-sdk": "^5.6.0",
+    "@gelatonetwork/relay-sdk-viem": "^1.4.0",
     "dotenv": "^16.5.0",
     "ethers": "^6.14.4"
   }
